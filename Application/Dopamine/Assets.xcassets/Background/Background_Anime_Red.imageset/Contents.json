@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "filename" : "background_red.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

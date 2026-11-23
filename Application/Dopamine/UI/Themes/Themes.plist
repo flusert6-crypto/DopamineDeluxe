@@ -18,5 +18,53 @@
 		<key>titleShadow</key>
 		<true/>
 	</dict>
+	<dict>
+		<key>key</key>
+		<string>crimson-ember</string>
+		<key>name</key>
+		<string>Crimson Ember</string>
+		<key>image</key>
+		<string>Background_Anime_Red</string>
+		<key>actionMenuColor</key>
+		<string>A6B53124</string>
+		<key>windowColor</key>
+		<string>C0180D16</string>
+		<key>blur</key>
+		<integer>0</integer>
+		<key>titleShadow</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>key</key>
+		<string>azure-dream</string>
+		<key>name</key>
+		<string>Azure Dream</string>
+		<key>image</key>
+		<string>Background_Anime_Blue</string>
+		<key>actionMenuColor</key>
+		<string>A62F6FA8</string>
+		<key>windowColor</key>
+		<string>C00B1830</string>
+		<key>blur</key>
+		<integer>0</integer>
+		<key>titleShadow</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>key</key>
+		<string>emerald-glow</string>
+		<key>name</key>
+		<string>Emerald Glow</string>
+		<key>image</key>
+		<string>Background_Anime_Green</string>
+		<key>actionMenuColor</key>
+		<string>A62D7957</string>
+		<key>windowColor</key>
+		<string>C00D241B</string>
+		<key>blur</key>
+		<integer>0</integer>
+		<key>titleShadow</key>
+		<true/>
+	</dict>
 </array>
 </plist>
