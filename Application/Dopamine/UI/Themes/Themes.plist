@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>key</key>
+		<string>default</string>
+		<key>name</key>
+		<string>Sakura Rain</string>
+		<key>image</key>
+		<string>Background_Deluxe</string>
+		<key>actionMenuColor</key>
+		<string>8C4A1D66</string>
+		<key>windowColor</key>
+		<string>B31C1136</string>
+		<key>blur</key>
+		<integer>0</integer>
+		<key>titleShadow</key>
+		<true/>
+	</dict>
+</array>
+</plist>
