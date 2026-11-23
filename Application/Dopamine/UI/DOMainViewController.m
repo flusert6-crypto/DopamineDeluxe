@@ -193,6 +193,33 @@
     [self.jailbreakBtn.button setTitle:[self jailbreakButtonTitle] forState:UIControlStateNormal];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    DOPreferenceManager *preferences = [DOPreferenceManager sharedManager];
+    BOOL shouldShowTrollStoreLitePrompt = [preferences boolPreferenceValueForKey:@"showTrollStoreLitePrompt" fallback:NO];
+    if (!shouldShowTrollStoreLitePrompt || ![[DOEnvironmentManager sharedManager] isJailbroken]) {
+        return;
+    }
+
+    // Consume the one-time prompt before presenting it, so it is never shown again after a relaunch.
+    [preferences setPreferenceValue:@NO forKey:@"showTrollStoreLitePrompt"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:DOLocalizedString(@"Onboarding_TrollStore_Lite_Title")
+                                                                       message:DOLocalizedString(@"Onboarding_TrollStore_Lite_Message")
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *skipAction = [UIAlertAction actionWithTitle:DOLocalizedString(@"Onboarding_Skip") style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *installAction = [UIAlertAction actionWithTitle:DOLocalizedString(@"Onboarding_Open_Havoc") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSURL *url = [NSURL URLWithString:@"https://havoc.app/package/trollstorelite"];
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        }];
+        [alert addAction:skipAction];
+        [alert addAction:installAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    });
+}
+
 - (void)startJailbreak
 {
     DOJailbreaker *jailbreaker = [[DOJailbreaker alloc] init];
@@ -264,6 +291,11 @@
             }
             else {
                 // No errors
+                DOPreferenceManager *preferences = [DOPreferenceManager sharedManager];
+                if (![preferences boolPreferenceValueForKey:@"initialJailbreakCompleted" fallback:NO]) {
+                    [preferences setPreferenceValue:@YES forKey:@"initialJailbreakCompleted"];
+                    [preferences setPreferenceValue:@YES forKey:@"showTrollStoreLitePrompt"];
+                }
                 [[DOUIManager sharedInstance] completeJailbreak];
                 [self fadeToBlack: ^{
                     [jailbreaker finalize];

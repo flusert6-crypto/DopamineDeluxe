@@ -23,6 +23,8 @@
 		<string>crimson-ember</string>
 		<key>name</key>
 		<string>Crimson Ember</string>
+		<key>icon</key>
+		<string>AppIcon_CrimsonEmber</string>
 		<key>image</key>
 		<string>Background_Anime_Red</string>
 		<key>actionMenuColor</key>
@@ -39,6 +41,8 @@
 		<string>azure-dream</string>
 		<key>name</key>
 		<string>Azure Dream</string>
+		<key>icon</key>
+		<string>AppIcon_AzureDream</string>
 		<key>image</key>
 		<string>Background_Anime_Blue</string>
 		<key>actionMenuColor</key>
@@ -55,6 +59,8 @@
 		<string>emerald-glow</string>
 		<key>name</key>
 		<string>Emerald Glow</string>
+		<key>icon</key>
+		<string>AppIcon_EmeraldGlow</string>
 		<key>image</key>
 		<string>Background_Anime_Green</string>
 		<key>actionMenuColor</key>

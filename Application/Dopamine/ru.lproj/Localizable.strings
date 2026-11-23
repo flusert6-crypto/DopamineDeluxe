@@ -123,3 +123,9 @@
 "Select_Package_Managers_Install_Message" = "Если вы не знаете, какой из них выбрать, выберите Sileo";
 "Continue" = "Продолжить";
 
+// Первый запуск после джейлбрейка
+"Onboarding_TrollStore_Lite_Title" = "Установить TrollStore Lite?";
+"Onboarding_TrollStore_Lite_Message" = "TrollStore Lite позволяет устанавливать IPA-файлы, пока активен джейлбрейк. Он доступен в официальном репозитории Havoc.";
+"Onboarding_Open_Havoc" = "Открыть Havoc";
+"Onboarding_Skip" = "Не сейчас";
+

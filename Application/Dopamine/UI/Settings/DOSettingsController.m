@@ -36,13 +36,15 @@
 - (void)viewWillAppear:(BOOL)arg1
 {
     [super viewWillAppear:arg1];
-    if (_lastKnownTheme != [[DOThemeManager sharedInstance] enabledTheme].key)
+    DOTheme *enabledTheme = [[DOThemeManager sharedInstance] enabledTheme];
+    if (![_lastKnownTheme isEqualToString:enabledTheme.key])
     {
-        [DOSceneDelegate relaunch];
-        NSString *icon = [[DOThemeManager sharedInstance] enabledTheme].icon;
+        _lastKnownTheme = enabledTheme.key;
+        NSString *icon = enabledTheme.icon;
         [[UIApplication sharedApplication] setAlternateIconName:icon completionHandler:^(NSError * _Nullable error) {
             if (error)
                 NSLog(@"Error changing app icon: %@", error);
+            [DOSceneDelegate relaunch];
         }];
 
         if ([DOEnvironmentManager sharedManager].isJailbroken) {

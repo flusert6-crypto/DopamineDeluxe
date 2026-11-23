@@ -129,3 +129,9 @@
 "Status_Title_Select_Package_Managers" = "Select Package Manager(s)";
 "Select_Package_Managers_Install_Message" = "If you are unsure which one to select, select Sileo";
 "Continue" = "Continue";
+
+// First jailbreak onboarding
+"Onboarding_TrollStore_Lite_Title" = "Install TrollStore Lite?";
+"Onboarding_TrollStore_Lite_Message" = "TrollStore Lite lets you install IPA files while your jailbreak is active. It is available from the official Havoc repository.";
+"Onboarding_Open_Havoc" = "Open Havoc";
+"Onboarding_Skip" = "Not Now";
