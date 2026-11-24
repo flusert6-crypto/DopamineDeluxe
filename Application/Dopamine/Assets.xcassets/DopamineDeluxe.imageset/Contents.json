@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "DopamineDeluxe.png",
+      "filename" : "DopamineDeluxeNew.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "DopamineDeluxe@2x.png",
+      "filename" : "DopamineDeluxeNew@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "DopamineDeluxe@3x.png",
+      "filename" : "DopamineDeluxeNew@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
