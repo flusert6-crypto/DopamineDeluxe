@@ -37,7 +37,7 @@
         self.logoView = [[UIImageView alloc] init];
         self.logoView.translatesAutoresizingMaskIntoConstraints = NO;
         self.logoView.contentMode = UIViewContentModeScaleAspectFit;
-        self.logoView.image = [image imageWithAlignmentRectInsets:UIEdgeInsetsMake(7, 0, -7, 0)];
+        self.logoView.image = image;
         [stackView addArrangedSubview:self.logoView];
 
         //Width follows the image aspect ratio, but can shrink on narrow screens (320pt) without distorting it
